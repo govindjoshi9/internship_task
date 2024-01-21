@@ -18,3 +18,8 @@ GitHub User Search is a web application that allows users to search for a GitHub
 
    ```bash
    git clone https://github.com/your-username/github-user-search.git
+
+![Screenshot (1)](https://github.com/govindjoshi9/internship_task/assets/79787938/e57eaa55-6991-404f-889c-f2bad2d89332)
+
+![Screenshot (2)](https://github.com/govindjoshi9/internship_task/assets/79787938/00929ccc-914c-45a9-95e9-d76a7103a508)
+
