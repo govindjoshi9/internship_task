@@ -4,7 +4,10 @@
     let totalRepos = 0;
     let totalPages = 1;
     let searchRepo;
+    let search ;
 
+    
+    $(document).ready(function () {
 
     function updatePagination() {
         const paginationContainer = $(".pages");
@@ -73,8 +76,10 @@
     function getRepoData(currPage) {
         $('.repos').empty();
         $('.error').hide();
-        $(".loading").show();
+        $(".Loading").show();
         var username = $('#search').val();
+        if (username) {
+
         getUserInfo(username);
         perPage = $('#perpage').val();
         searchRepo = $('#custom').val();
@@ -86,14 +91,24 @@
                 totalPages = Math.ceil(data.total_count / perPage);
                 updatePagination();
                 renderRepos(data.items);
+
+                $('html, body').animate({
+                    scrollTop: $(".container").offset().top
+                }, 800);
                 $(".loading").hide();
             },
             error: function(error) {
                 console.log("Error while calling API");
+                $('.repos').append(`<span class="error">Error while calling API</span>`)
                 $(".loading").hide();
             }
         });
+        $(".container").show();
+
     };
+    
+   
+}
 
 
     function getUserInfo(username) {
@@ -145,7 +160,7 @@
             });
         }
     }
-
+    
 
 
     $(document).ready(function() {
@@ -160,4 +175,4 @@
             $('#submit').click();
         }
         simulateExample();
-    });
+    })});

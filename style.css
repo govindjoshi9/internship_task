@@ -1,8 +1,74 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
 body {
-    padding: 0 5px;
-    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fff;
 }
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.items-per-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    gap: 5px;
+}
+
+.btn-container {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-end;
+}
+
+#search {
+    width: 200px;
+    height: 30px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 5px 15px;
+}
+
+#perpage {
+    width: 50px;
+    height: 35px;
+    border: 1px solid gray;
+    border-radius: 10px;
+}
+
+#submit {
+    height: 40px;
+    width: fit-content;
+    background-color: #428bca;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 15px;
+    cursor: pointer;
+    font-style: bold;
+}
+
+/* ... Other styles remain unchanged ... */
+
 
 h1,
 p {
@@ -17,7 +83,10 @@ a {
 
 .container {
     border: 1px solid black;
+    display: none;
+
 }
+
 
 .info {
     display: flex;
